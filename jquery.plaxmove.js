@@ -10,11 +10,11 @@
 		var settings = $.extend({},this.defaults,options),
 			layer = $(this),
 			center = {
-				x: $('html').width()/2-layer.width()/2,
-				y: $('html').height()/2-layer.height()/2
+				x: window.innerWidth/2-layer.width()/2,
+				y: window.innerHeight/2-layer.height()/2
 			},
-			y0 = layer.offset().top,
-			x0 = layer.offset().left;
+			y0 = layer.position().top,
+			x0 = layer.position().left;
 			
 		var eqH = function(e) {
 			return x0+(e.pageX - center.x)*settings.ratioH

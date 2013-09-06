@@ -9,9 +9,11 @@
 		
 		var settings = $.extend({},this.defaults,options),
 			layer = $(this),
+			innerWidth = window.innerWidth || document.documentElement.clientWidth,
+			innerHeight = window.innerHeight || document.documentElement.clientHeight,
 			center = {
-				x: window.innerWidth/2-layer.width()/2,
-				y: window.innerHeight/2-layer.height()/2
+				x: innerWidth/2-layer.width()/2,
+				y: innerHeight/2-layer.height()/2
 			},
 			y0 = layer.position().top,
 			x0 = layer.position().left;
